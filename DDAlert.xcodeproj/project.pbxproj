@@ -10,6 +10,19 @@
 		012ABD9C241CF88900EBEC9B /* DDAlert.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 012ABD92241CF88900EBEC9B /* DDAlert.framework */; };
 		012ABDA1241CF88900EBEC9B /* DDAlertTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012ABDA0241CF88900EBEC9B /* DDAlertTests.swift */; };
 		012ABDA3241CF88900EBEC9B /* DDAlert.h in Headers */ = {isa = PBXBuildFile; fileRef = 012ABD95241CF88900EBEC9B /* DDAlert.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		012ABDB3241D022B00EBEC9B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012ABDB2241D022B00EBEC9B /* AppDelegate.swift */; };
+		012ABDBC241D022E00EBEC9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 012ABDBB241D022E00EBEC9B /* Assets.xcassets */; };
+		012ABDBF241D022E00EBEC9B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 012ABDBD241D022E00EBEC9B /* LaunchScreen.storyboard */; };
+		012ABDC8241D045500EBEC9B /* DDAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012ABDC6241D045500EBEC9B /* DDAlert.swift */; };
+		012ABDC9241D045500EBEC9B /* DDAlert.xib in Resources */ = {isa = PBXBuildFile; fileRef = 012ABDC7241D045500EBEC9B /* DDAlert.xib */; };
+		012ABDCB241D081A00EBEC9B /* SimpleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012ABDCA241D081A00EBEC9B /* SimpleViewController.swift */; };
+		01D9BFB1241D0FD50034E534 /* DDAlert.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 01D9BFB0241D0FD50034E534 /* DDAlert.podspec */; };
+		01D9BFB3241D10E60034E534 /* DDAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D9BFB2241D10E60034E534 /* DDAlertView.swift */; };
+		01D9BFB7241D1B100034E534 /* DDAlertAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D9BFB6241D1B100034E534 /* DDAlertAppearance.swift */; };
+		01D9BFB9241D30F40034E534 /* DDAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01D9BFB8241D30F40034E534 /* DDAlertView.xib */; };
+		01D9BFBB241D46590034E534 /* DDAlertAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D9BFBA241D46590034E534 /* DDAlertAction.swift */; };
+		01D9BFBD241D49580034E534 /* DDAlertActionAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D9BFBC241D49580034E534 /* DDAlertActionAppearance.swift */; };
+		01D9BFBF241D4C2B0034E534 /* DDAlertButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D9BFBE241D4C2B0034E534 /* DDAlertButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +42,21 @@
 		012ABD9B241CF88900EBEC9B /* DDAlertTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DDAlertTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		012ABDA0241CF88900EBEC9B /* DDAlertTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDAlertTests.swift; sourceTree = "<group>"; };
 		012ABDA2241CF88900EBEC9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		012ABDB0241D022B00EBEC9B /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		012ABDB2241D022B00EBEC9B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		012ABDBB241D022E00EBEC9B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		012ABDBE241D022E00EBEC9B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		012ABDC0241D022E00EBEC9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		012ABDC6241D045500EBEC9B /* DDAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDAlert.swift; sourceTree = "<group>"; };
+		012ABDC7241D045500EBEC9B /* DDAlert.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DDAlert.xib; sourceTree = "<group>"; };
+		012ABDCA241D081A00EBEC9B /* SimpleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleViewController.swift; sourceTree = "<group>"; };
+		01D9BFB0241D0FD50034E534 /* DDAlert.podspec */ = {isa = PBXFileReference; lastKnownFileType = file; path = DDAlert.podspec; sourceTree = SOURCE_ROOT; };
+		01D9BFB2241D10E60034E534 /* DDAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDAlertView.swift; sourceTree = "<group>"; };
+		01D9BFB6241D1B100034E534 /* DDAlertAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDAlertAppearance.swift; sourceTree = "<group>"; };
+		01D9BFB8241D30F40034E534 /* DDAlertView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DDAlertView.xib; sourceTree = "<group>"; };
+		01D9BFBA241D46590034E534 /* DDAlertAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDAlertAction.swift; sourceTree = "<group>"; };
+		01D9BFBC241D49580034E534 /* DDAlertActionAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDAlertActionAppearance.swift; sourceTree = "<group>"; };
+		01D9BFBE241D4C2B0034E534 /* DDAlertButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDAlertButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +75,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		012ABDAD241D022B00EBEC9B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -55,6 +90,7 @@
 			children = (
 				012ABD94241CF88900EBEC9B /* DDAlert */,
 				012ABD9F241CF88900EBEC9B /* DDAlertTests */,
+				012ABDB1241D022B00EBEC9B /* Example */,
 				012ABD93241CF88900EBEC9B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -64,6 +100,7 @@
 			children = (
 				012ABD92241CF88900EBEC9B /* DDAlert.framework */,
 				012ABD9B241CF88900EBEC9B /* DDAlertTests.xctest */,
+				012ABDB0241D022B00EBEC9B /* Example.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -71,8 +108,8 @@
 		012ABD94241CF88900EBEC9B /* DDAlert */ = {
 			isa = PBXGroup;
 			children = (
-				012ABD95241CF88900EBEC9B /* DDAlert.h */,
-				012ABD96241CF88900EBEC9B /* Info.plist */,
+				012ABDC5241D041700EBEC9B /* Source */,
+				012ABDC4241D03B500EBEC9B /* Config files */,
 			);
 			path = DDAlert;
 			sourceTree = "<group>";
@@ -84,6 +121,43 @@
 				012ABDA2241CF88900EBEC9B /* Info.plist */,
 			);
 			path = DDAlertTests;
+			sourceTree = "<group>";
+		};
+		012ABDB1241D022B00EBEC9B /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				012ABDB2241D022B00EBEC9B /* AppDelegate.swift */,
+				012ABDCA241D081A00EBEC9B /* SimpleViewController.swift */,
+				012ABDBB241D022E00EBEC9B /* Assets.xcassets */,
+				012ABDBD241D022E00EBEC9B /* LaunchScreen.storyboard */,
+				012ABDC0241D022E00EBEC9B /* Info.plist */,
+			);
+			path = Example;
+			sourceTree = "<group>";
+		};
+		012ABDC4241D03B500EBEC9B /* Config files */ = {
+			isa = PBXGroup;
+			children = (
+				01D9BFB0241D0FD50034E534 /* DDAlert.podspec */,
+				012ABD95241CF88900EBEC9B /* DDAlert.h */,
+				012ABD96241CF88900EBEC9B /* Info.plist */,
+			);
+			path = "Config files";
+			sourceTree = "<group>";
+		};
+		012ABDC5241D041700EBEC9B /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				012ABDC6241D045500EBEC9B /* DDAlert.swift */,
+				012ABDC7241D045500EBEC9B /* DDAlert.xib */,
+				01D9BFB2241D10E60034E534 /* DDAlertView.swift */,
+				01D9BFB8241D30F40034E534 /* DDAlertView.xib */,
+				01D9BFB6241D1B100034E534 /* DDAlertAppearance.swift */,
+				01D9BFBA241D46590034E534 /* DDAlertAction.swift */,
+				01D9BFBC241D49580034E534 /* DDAlertActionAppearance.swift */,
+				01D9BFBE241D4C2B0034E534 /* DDAlertButton.swift */,
+			);
+			path = Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,6 +210,23 @@
 			productReference = 012ABD9B241CF88900EBEC9B /* DDAlertTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		012ABDAF241D022B00EBEC9B /* Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 012ABDC3241D022E00EBEC9B /* Build configuration list for PBXNativeTarget "Example" */;
+			buildPhases = (
+				012ABDAC241D022B00EBEC9B /* Sources */,
+				012ABDAD241D022B00EBEC9B /* Frameworks */,
+				012ABDAE241D022B00EBEC9B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Example;
+			productName = Example;
+			productReference = 012ABDB0241D022B00EBEC9B /* Example.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -148,8 +239,12 @@
 				TargetAttributes = {
 					012ABD91241CF88900EBEC9B = {
 						CreatedOnToolsVersion = 11.3;
+						LastSwiftMigration = 1130;
 					};
 					012ABD9A241CF88900EBEC9B = {
+						CreatedOnToolsVersion = 11.3;
+					};
+					012ABDAF241D022B00EBEC9B = {
 						CreatedOnToolsVersion = 11.3;
 					};
 				};
@@ -167,6 +262,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				012ABDAF241D022B00EBEC9B /* Example */,
 				012ABD91241CF88900EBEC9B /* DDAlert */,
 				012ABD9A241CF88900EBEC9B /* DDAlertTests */,
 			);
@@ -178,6 +274,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				012ABDC9241D045500EBEC9B /* DDAlert.xib in Resources */,
+				01D9BFB9241D30F40034E534 /* DDAlertView.xib in Resources */,
+				01D9BFB1241D0FD50034E534 /* DDAlert.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,6 +287,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		012ABDAE241D022B00EBEC9B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				012ABDBF241D022E00EBEC9B /* LaunchScreen.storyboard in Resources */,
+				012ABDBC241D022E00EBEC9B /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -195,6 +303,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01D9BFBF241D4C2B0034E534 /* DDAlertButton.swift in Sources */,
+				01D9BFBB241D46590034E534 /* DDAlertAction.swift in Sources */,
+				012ABDC8241D045500EBEC9B /* DDAlert.swift in Sources */,
+				01D9BFB7241D1B100034E534 /* DDAlertAppearance.swift in Sources */,
+				01D9BFBD241D49580034E534 /* DDAlertActionAppearance.swift in Sources */,
+				01D9BFB3241D10E60034E534 /* DDAlertView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,6 +317,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				012ABDA1241CF88900EBEC9B /* DDAlertTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		012ABDAC241D022B00EBEC9B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				012ABDCB241D081A00EBEC9B /* SimpleViewController.swift in Sources */,
+				012ABDB3241D022B00EBEC9B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,6 +338,17 @@
 			targetProxy = 012ABD9D241CF88900EBEC9B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		012ABDBD241D022E00EBEC9B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				012ABDBE241D022E00EBEC9B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		012ABDA4241CF88900EBEC9B /* Debug */ = {
@@ -268,7 +402,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -327,7 +461,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -344,13 +478,14 @@
 		012ABDA7241CF88900EBEC9B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = D5F9AJ2FHF;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = DDAlert/Info.plist;
+				INFOPLIST_FILE = "DDAlert/Config files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -360,19 +495,22 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.thanhducdo.DDAlert;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
 		012ABDA8241CF88900EBEC9B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = D5F9AJ2FHF;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = DDAlert/Info.plist;
+				INFOPLIST_FILE = "DDAlert/Config files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -382,12 +520,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.thanhducdo.DDAlert;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
 		012ABDAA241CF88900EBEC9B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D5F9AJ2FHF;
 				INFOPLIST_FILE = DDAlertTests/Info.plist;
@@ -405,6 +545,7 @@
 		012ABDAB241CF88900EBEC9B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D5F9AJ2FHF;
 				INFOPLIST_FILE = DDAlertTests/Info.plist;
@@ -414,6 +555,41 @@
 					"@loader_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.thanhducdo.DDAlertTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		012ABDC1241D022E00EBEC9B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = D5F9AJ2FHF;
+				INFOPLIST_FILE = Example/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.thanhducdo.Example;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		012ABDC2241D022E00EBEC9B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = D5F9AJ2FHF;
+				INFOPLIST_FILE = Example/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.thanhducdo.Example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -445,6 +621,15 @@
 			buildConfigurations = (
 				012ABDAA241CF88900EBEC9B /* Debug */,
 				012ABDAB241CF88900EBEC9B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		012ABDC3241D022E00EBEC9B /* Build configuration list for PBXNativeTarget "Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				012ABDC1241D022E00EBEC9B /* Debug */,
+				012ABDC2241D022E00EBEC9B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
