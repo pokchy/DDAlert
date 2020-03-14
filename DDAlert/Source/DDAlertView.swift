@@ -14,7 +14,10 @@ internal final class DDAlertView: UIView {
     @IBOutlet private weak var messageLabel: UILabel!
     @IBOutlet private weak var actionsStackView: UIStackView!
 
+    private var appearance: DDAlertAppearance
+
     internal init(title: String? = nil, message: String? = nil, actions: [DDAlertAction], appearance: DDAlertAppearance, delegate: DDAlertButtonDelegate?) {
+        self.appearance = appearance
         super.init(frame: .zero)
         loadView()
         titleLabel.text = title
@@ -23,7 +26,6 @@ internal final class DDAlertView: UIView {
         messageLabel.text = message
         messageLabel.font = appearance.messageFont
         messageLabel.textColor = appearance.alertTextColor
-        backgroundColor = appearance.alertBackgroundColor
         actions.forEach { action in
             let button = DDAlertButton(title: action.title, appearance: action.appearance, action: action.action)
             button.delegate = delegate
@@ -41,6 +43,9 @@ internal final class DDAlertView: UIView {
         }
         addSubview(contentView)
         contentView.frame = self.bounds
+        contentView.clipsToBounds = true
+        contentView.layer.cornerRadius = 8
+        contentView.backgroundColor = appearance.alertBackgroundColor
         contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
     }
 }

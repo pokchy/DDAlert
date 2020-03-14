@@ -23,6 +23,7 @@ internal final class DDAlertButton: UIButton {
         backgroundColor = appearance.backgroundColor
         titleLabel?.font = appearance.titleFont
         setTitleColor(appearance.textColor, for: .normal)
+        titleEdgeInsets = UIEdgeInsets(top: 4, left: 16, bottom: 4, right: 16)
         self.action = action
         addTarget(self, action: #selector(triggerAction), for: .touchUpInside)
     }

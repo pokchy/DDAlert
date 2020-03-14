@@ -28,16 +28,20 @@ class SimpleViewController: UIViewController {
     @objc private func showAlert() {
         let actions = [
             DDAlertAction(title: "Action 1", action: {
-                print("Hello action 1")
+                print("Action 1")
             }),
             DDAlertAction(title: "Action 2", action: {
-                print("Hello action 2")
+                print("Action 2")
             }),
             DDAlertAction(title: "Action 3", action: {
-                print("Hello action 3")
+                print("Action 3")
             })
         ]
-        let alert = DDAlert(title: "Hello", message: "World", actions: actions)
+
+        var appearance = DDAlertAppearance()
+        appearance.alertBackgroundColor = .yellow
+
+        let alert = DDAlert(title: "Insert your title here", message: "Display a message for this alert. Something more", actions: actions, appearance: appearance)
         present(alert, animated: true)
     }
 }
