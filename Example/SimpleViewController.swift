@@ -25,7 +25,7 @@ class SimpleViewController: UIViewController {
         ])
     }
 
-    @objc private func showAlert() {
+    @objc private func showAlert(button: UIButton) {
         let actions = [
             DDAlertAction(title: "Action 1", action: {
                 print("Action 1")
@@ -40,8 +40,9 @@ class SimpleViewController: UIViewController {
 
         var appearance = DDAlertAppearance()
         appearance.alertBackgroundColor = .yellow
+        appearance.transparentBackgroundColor = .blue
 
-        let alert = DDAlert(title: "Insert your title here", message: "Display a message for this alert. Something more", actions: actions, appearance: appearance)
+        let alert = DDAlert(title: "Insert your title here", message: "Display a message for this alert. Something more", actions: actions, sourceObject: button, appearance: appearance)
         present(alert, animated: true)
     }
 }
