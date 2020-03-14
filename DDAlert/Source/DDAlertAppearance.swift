@@ -10,7 +10,7 @@ import UIKit
 
 public struct DDAlertAppearance {
 
-    public var transparentBackgroundColor = UIColor.gray.withAlphaComponent(0.3)
+    public var transparentBackgroundColor = UIColor.clear
     public var shadowColor = UIColor.black
     public var alertBackgroundColor = UIColor.white
     public var alertTextColor = UIColor.black
