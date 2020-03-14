@@ -2,6 +2,7 @@ Pod::Spec.new do |spec|
 
   spec.name         = 'DDAlert'
   spec.version      = '0.1.0'
+  spec.homepage     = 'https://github.com/pokchy/DDAlert'
   spec.summary      = 'Testing building a framework.'
 
   spec.license      = { :type => "MIT", :file => "LICENSE" }
@@ -12,6 +13,5 @@ Pod::Spec.new do |spec|
 
   spec.source       = { :git => "https://github.com/pokchy/DDAlert.git", :tag => "#{spec.version}" }
 
-  spec.source_files  = "Classes", "Classes/**/*.{h,m}"
-  spec.exclude_files = "Classes/Exclude"
+  spec.source_files  = 'DDAlert/Source/*.{swift,xib}'
 end
