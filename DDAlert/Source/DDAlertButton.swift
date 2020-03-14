@@ -8,14 +8,14 @@
 
 import UIKit
 
-internal protocol DDAlertButtonDelegate {
+internal protocol DDAlertButtonDelegate: AnyObject {
     func buttonPressed()
 }
 
 internal final class DDAlertButton: UIButton {
 
     private var action: (() -> Void)?
-    internal var delegate: DDAlertButtonDelegate?
+    internal weak var delegate: DDAlertButtonDelegate?
 
     public init(title: String = "", appearance: DDAlertActionAppearance, action: (() -> Void)? = nil) {
         super.init(frame: .zero)
