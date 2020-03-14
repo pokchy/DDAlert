@@ -1,0 +1,6 @@
+language: swift
+os: osx
+osx_image: xcode11.3
+xcode_project: DDAlert.xcodeproj
+xcode_scheme: DDAlert
+xcode_destination: platform=iOS Simulator,OS=11.3,name=iPhone X
