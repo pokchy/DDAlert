@@ -11,21 +11,7 @@ import DDAlert
 
 class SimpleViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        let button = UIButton()
-        button.setTitle("Show alert", for: .normal)
-        button.addTarget(self, action: #selector(showAlert), for: .touchUpInside)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(button)
-        NSLayoutConstraint.activate([
-            button.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            button.centerXAnchor.constraint(equalTo: view.centerXAnchor)
-        ])
-    }
-
-    @objc private func showAlert(button: UIButton) {
+    @IBAction func showAlert(_ sender: UIButton) {
         let actions = [
             DDAlertAction(title: "Action 1", action: {
                 print("Action 1")
@@ -42,7 +28,23 @@ class SimpleViewController: UIViewController {
         appearance.alertBackgroundColor = .yellow
         appearance.transparentBackgroundColor = .blue
 
-        let alert = DDAlert(title: "Insert your title here", message: "Display a message for this alert. Something more", actions: actions, sourceObject: button, appearance: appearance)
+        let alert = DDAlert(title: "Insert your title here", message: "Display a message for this alert. Something more", actions: actions, sourceObject: sender, appearance: appearance)
+        present(alert, animated: true)
+    }
+    
+    @IBAction func showAlertInMiddle(_ sender: Any) {
+        let actions = [
+            DDAlertAction(title: "Action 1", action: {
+                print("Action 1")
+            }),
+            DDAlertAction(title: "Action 2", action: {
+                print("Action 2")
+            }),
+            DDAlertAction(title: "Action 3", action: {
+                print("Action 3")
+            })
+        ]
+        let alert = DDAlert(title: "Insert your title here", message: "Display a message for this alert. Something more", actions: actions)
         present(alert, animated: true)
     }
 }

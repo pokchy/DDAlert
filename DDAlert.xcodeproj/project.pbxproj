@@ -16,6 +16,9 @@
 		012ABDC8241D045500EBEC9B /* DDAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012ABDC6241D045500EBEC9B /* DDAlert.swift */; };
 		012ABDC9241D045500EBEC9B /* DDAlert.xib in Resources */ = {isa = PBXBuildFile; fileRef = 012ABDC7241D045500EBEC9B /* DDAlert.xib */; };
 		012ABDCB241D081A00EBEC9B /* SimpleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012ABDCA241D081A00EBEC9B /* SimpleViewController.swift */; };
+		01B1625C241E390100D521BD /* DDAlertAnimatedTransitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B1625B241E390100D521BD /* DDAlertAnimatedTransitioning.swift */; };
+		01B1625E241E4C9000D521BD /* UIView+Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B1625D241E4C9000D521BD /* UIView+Position.swift */; };
+		01B16260241E536C00D521BD /* SimpleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01B1625F241E536C00D521BD /* SimpleViewController.xib */; };
 		01D9BFB1241D0FD50034E534 /* DDAlert.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 01D9BFB0241D0FD50034E534 /* DDAlert.podspec */; };
 		01D9BFB3241D10E60034E534 /* DDAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D9BFB2241D10E60034E534 /* DDAlertView.swift */; };
 		01D9BFB7241D1B100034E534 /* DDAlertAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D9BFB6241D1B100034E534 /* DDAlertAppearance.swift */; };
@@ -50,7 +53,10 @@
 		012ABDC6241D045500EBEC9B /* DDAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDAlert.swift; sourceTree = "<group>"; };
 		012ABDC7241D045500EBEC9B /* DDAlert.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DDAlert.xib; sourceTree = "<group>"; };
 		012ABDCA241D081A00EBEC9B /* SimpleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleViewController.swift; sourceTree = "<group>"; };
-		01D9BFB0241D0FD50034E534 /* DDAlert.podspec */ = {isa = PBXFileReference; lastKnownFileType = file; path = DDAlert.podspec; sourceTree = SOURCE_ROOT; };
+		01B1625B241E390100D521BD /* DDAlertAnimatedTransitioning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDAlertAnimatedTransitioning.swift; sourceTree = "<group>"; };
+		01B1625D241E4C9000D521BD /* UIView+Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Position.swift"; sourceTree = "<group>"; };
+		01B1625F241E536C00D521BD /* SimpleViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SimpleViewController.xib; sourceTree = "<group>"; };
+		01D9BFB0241D0FD50034E534 /* DDAlert.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = DDAlert.podspec; sourceTree = SOURCE_ROOT; };
 		01D9BFB2241D10E60034E534 /* DDAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDAlertView.swift; sourceTree = "<group>"; };
 		01D9BFB6241D1B100034E534 /* DDAlertAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDAlertAppearance.swift; sourceTree = "<group>"; };
 		01D9BFB8241D30F40034E534 /* DDAlertView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DDAlertView.xib; sourceTree = "<group>"; };
@@ -128,6 +134,7 @@
 			children = (
 				012ABDB2241D022B00EBEC9B /* AppDelegate.swift */,
 				012ABDCA241D081A00EBEC9B /* SimpleViewController.swift */,
+				01B1625F241E536C00D521BD /* SimpleViewController.xib */,
 				012ABDBB241D022E00EBEC9B /* Assets.xcassets */,
 				012ABDBD241D022E00EBEC9B /* LaunchScreen.storyboard */,
 				012ABDC0241D022E00EBEC9B /* Info.plist */,
@@ -156,6 +163,8 @@
 				01D9BFBA241D46590034E534 /* DDAlertAction.swift */,
 				01D9BFBC241D49580034E534 /* DDAlertActionAppearance.swift */,
 				01D9BFBE241D4C2B0034E534 /* DDAlertButton.swift */,
+				01B1625B241E390100D521BD /* DDAlertAnimatedTransitioning.swift */,
+				01B1625D241E4C9000D521BD /* UIView+Position.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -291,6 +300,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01B16260241E536C00D521BD /* SimpleViewController.xib in Resources */,
 				012ABDBF241D022E00EBEC9B /* LaunchScreen.storyboard in Resources */,
 				012ABDBC241D022E00EBEC9B /* Assets.xcassets in Resources */,
 			);
@@ -304,11 +314,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				01D9BFBF241D4C2B0034E534 /* DDAlertButton.swift in Sources */,
+				01B1625E241E4C9000D521BD /* UIView+Position.swift in Sources */,
 				01D9BFBB241D46590034E534 /* DDAlertAction.swift in Sources */,
 				012ABDC8241D045500EBEC9B /* DDAlert.swift in Sources */,
 				01D9BFB7241D1B100034E534 /* DDAlertAppearance.swift in Sources */,
 				01D9BFBD241D49580034E534 /* DDAlertActionAppearance.swift in Sources */,
 				01D9BFB3241D10E60034E534 /* DDAlertView.swift in Sources */,
+				01B1625C241E390100D521BD /* DDAlertAnimatedTransitioning.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

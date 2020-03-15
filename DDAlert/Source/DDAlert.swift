@@ -30,7 +30,7 @@ public final class DDAlert: UIViewController {
         return nil
     }
 
-    private lazy var alertView: DDAlertView = {
+    internal lazy var alertView: DDAlertView = {
         let alertView = DDAlertView(title: alertTitle, message: alertMessage, actions: actions, appearance: appearance, delegate: self)
         alertView.translatesAutoresizingMaskIntoConstraints = false
         return alertView
@@ -46,7 +46,7 @@ public final class DDAlert: UIViewController {
         self.actions = actions
         super.init(nibName: String(describing: DDAlert.self), bundle: Bundle(for: DDAlert.self))
         modalPresentationStyle = .overCurrentContext
-        modalTransitionStyle = .crossDissolve
+        transitioningDelegate = self
     }
 
     required init?(coder: NSCoder) {
@@ -64,43 +64,48 @@ public final class DDAlert: UIViewController {
 
     public override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        showAlertInCenter()
+        positionAlertView()
     }
 
     @objc private func dismissAlert() {
-        UIView.animate(withDuration: 0.3, animations: {
-            self.alertView.transform = CGAffineTransform.identity.scaledBy(x: 0.3, y: 0.3)
-            self.alertView.alpha = 0
-            self.view.backgroundColor = .clear
-        }) { _ in
-            self.dismiss(animated: false) {
-                self.delegate?.didDismissAlert?()
-            }
+        dismiss(animated: true) {
+            self.delegate?.didDismissAlert?()
         }
     }
 
-    private func showAlertInCenter() {
-        NSLayoutConstraint.activate([
-            alertView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            alertView.centerXAnchor.constraint(equalTo: view.centerXAnchor)
-        ])
-        showAlert()
-    }
-
-    // WIP
-    private func showAlertRelative(to sourceView: UIView) {
-        alertView.layer.anchorPoint = CGPoint(x: 1, y: 1)
-        alertView.layer.position = sourceView.center
-        showAlert()
-    }
-
-    private func showAlert() {
-        alertView.transform = CGAffineTransform.identity.scaledBy(x: 0, y: 0)
-        alertView.alpha = 0
-        UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
-            self.alertView.transform = .identity
-            self.alertView.alpha = 1
-        })
+    private func positionAlertView() {
+        if let sourceView = sourceView, let relativePosition = sourceView.relativeCenterPositionInScreen {
+            switch relativePosition {
+            case .center:
+                alertView.center = view.center
+            case .upperHorizontalAligned:
+                alertView.layer.anchorPoint = CGPoint(x: 0.5, y: 0)
+                alertView.layer.position = sourceView.center
+            case .upperRight:
+                alertView.layer.anchorPoint = CGPoint(x: 1, y: 0)
+                alertView.layer.position = sourceView.center
+            case .rightVerticalAligned:
+                alertView.layer.anchorPoint = CGPoint(x: 1, y: 0.5)
+                alertView.layer.position = sourceView.center
+            case .lowerRight:
+                alertView.layer.anchorPoint = CGPoint(x: 1, y: 1)
+                alertView.layer.position = sourceView.center
+            case .lowerHorizontalAligned:
+                alertView.layer.anchorPoint = CGPoint(x: 0.5, y: 1)
+                alertView.layer.position = sourceView.center
+            case .lowerLeft:
+                alertView.layer.anchorPoint = CGPoint(x: 0, y: 1)
+                alertView.layer.position = sourceView.center
+            case .leftVerticalAligned:
+                alertView.layer.anchorPoint = CGPoint(x: 0, y: 0.5)
+                alertView.layer.position = sourceView.center
+            case .upperLeft:
+                alertView.layer.anchorPoint = CGPoint(x: 0, y: 0)
+                alertView.layer.position = sourceView.center
+            }
+        } else {
+            alertView.center = view.center
+        }
     }
 }
 
@@ -113,5 +118,15 @@ extension DDAlert: UIGestureRecognizerDelegate {
 extension DDAlert: DDAlertButtonDelegate {
     func buttonPressed() {
         dismissAlert()
+    }
+}
+
+extension DDAlert: UIViewControllerTransitioningDelegate {
+    public func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return DDAlertAnimatedTransitioning()
+    }
+
+    public func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return DDAlertAnimatedTransitioning()
     }
 }

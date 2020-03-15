@@ -12,7 +12,7 @@ public struct DDAlertActionAppearance {
 
     public var backgroundColor = UIColor.clear
     public var textColor = UIColor.black
-    public var titleFont = UIFont.boldSystemFont(ofSize: 17)
+    public var titleFont: UIFont? = nil
 
     public init() { }
 }
