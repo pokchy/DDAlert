@@ -14,7 +14,7 @@ internal protocol DDAlertButtonDelegate: AnyObject {
 
 internal final class DDAlertButton: UIButton {
 
-    private let alertAction: DDAlertAction
+    internal let alertAction: DDAlertAction
     internal weak var delegate: DDAlertButtonDelegate?
 
     init(action alertAction: DDAlertAction) {

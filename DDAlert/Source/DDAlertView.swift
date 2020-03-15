@@ -10,9 +10,9 @@ import UIKit
 
 internal final class DDAlertView: UIView {
 
-    @IBOutlet private weak var titleLabel: UILabel!
-    @IBOutlet private weak var messageLabel: UILabel!
-    @IBOutlet private weak var actionsStackView: UIStackView!
+    @IBOutlet internal weak var titleLabel: UILabel!
+    @IBOutlet internal weak var messageLabel: UILabel!
+    @IBOutlet internal weak var actionsStackView: UIStackView!
 
     private var appearance: DDAlertAppearance
 

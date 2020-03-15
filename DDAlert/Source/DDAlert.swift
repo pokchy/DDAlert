@@ -22,12 +22,9 @@ public final class DDAlert: UIViewController {
     private var alertTitle: String?
     private var alertMessage: String?
     private var actions: [DDAlertAction]
-    private var sourceView: UIView? {
+    internal var sourceView: UIView? {
         guard let object = sourceObject else { return nil }
         if let view = object as? UIView {
-            return view
-        }
-        if let barButtonItem = object as? UIBarButtonItem, let view = barButtonItem.value(forKey: "view") as? UIView {
             return view
         }
         return nil
@@ -82,7 +79,7 @@ public final class DDAlert: UIViewController {
         positionAlertView()
     }
 
-    @objc private func dismissAlert() {
+    @objc internal func dismissAlert() {
         dismiss(animated: true) {
             self.delegate?.didDismissAlert(fromAction: nil)
         }
