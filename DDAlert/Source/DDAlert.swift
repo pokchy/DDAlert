@@ -8,10 +8,13 @@
 
 import UIKit
 
-@objc public protocol DDAlertDelegate: AnyObject {
-    @objc optional func didDismissAlert()
+public protocol DDAlertDelegate: AnyObject {
+    /// Delegate function is triggered when alert was dismissed
+    /// - Parameter fromAction: Action object when DDAlert was dismissed by pressing an action. Otherwise nil.
+    func didDismissAlert(fromAction: DDAlertAction?)
 }
 
+/// Customizable alert
 public final class DDAlert: UIViewController {
 
     private weak var sourceObject: AnyObject?
@@ -38,6 +41,13 @@ public final class DDAlert: UIViewController {
 
     public weak var delegate: DDAlertDelegate?
 
+    /// DDAlert initializer
+    /// - Parameters:
+    ///   - title: Title to be displayed. Default is nil
+    ///   - message: Message to be displayed. Default is nil
+    ///   - actions: Array of DDAlertAction to trigger actions
+    ///   - sourceObject: Object to determine location of DDAlert. Default is nil
+    ///   - appearance: Appearance to customize DDAlert
     public init(title: String? = nil, message: String? = nil, actions: [DDAlertAction], sourceObject: AnyObject? = nil, appearance: DDAlertAppearance = DDAlertAppearance()) {
         self.sourceObject = sourceObject
         self.appearance = appearance
@@ -74,7 +84,7 @@ public final class DDAlert: UIViewController {
 
     @objc private func dismissAlert() {
         dismiss(animated: true) {
-            self.delegate?.didDismissAlert?()
+            self.delegate?.didDismissAlert(fromAction: nil)
         }
     }
 
@@ -115,14 +125,20 @@ public final class DDAlert: UIViewController {
 }
 
 extension DDAlert: UIGestureRecognizerDelegate {
+    /// Implemented UIGestureRecognizerDelegate to trigger dismissal of DDAlert
+    /// - Parameters:
+    ///   - gestureRecognizer: UIGestureRecognizer
+    ///   - touch: UITouch
     public func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
         return touch.view == gestureRecognizer.view
     }
 }
 
 extension DDAlert: DDAlertButtonDelegate {
-    func buttonPressed() {
-        dismissAlert()
+    func buttonPressed(action: DDAlertAction) {
+        dismiss(animated: true) {
+            self.delegate?.didDismissAlert(fromAction: action)
+        }
     }
 }
 

@@ -9,22 +9,22 @@
 import UIKit
 
 internal protocol DDAlertButtonDelegate: AnyObject {
-    func buttonPressed()
+    func buttonPressed(action: DDAlertAction)
 }
 
 internal final class DDAlertButton: UIButton {
 
-    private var action: (() -> Void)?
+    private let alertAction: DDAlertAction
     internal weak var delegate: DDAlertButtonDelegate?
 
-    public init(title: String = "", appearance: DDAlertActionAppearance, action: (() -> Void)? = nil) {
+    init(action alertAction: DDAlertAction) {
+        self.alertAction = alertAction
         super.init(frame: .zero)
-        setTitle(title, for: .normal)
-        backgroundColor = appearance.backgroundColor
-        titleLabel?.font = appearance.titleFont
-        setTitleColor(appearance.textColor, for: .normal)
+        setTitle(alertAction.title, for: .normal)
+        backgroundColor = alertAction.appearance.backgroundColor
+        titleLabel?.font = alertAction.appearance.titleFont
+        setTitleColor(alertAction.appearance.textColor, for: .normal)
         titleEdgeInsets = UIEdgeInsets(top: 4, left: 16, bottom: 4, right: 16)
-        self.action = action
         addTarget(self, action: #selector(triggerAction), for: .touchUpInside)
     }
 
@@ -33,7 +33,7 @@ internal final class DDAlertButton: UIButton {
     }
 
     @objc private func triggerAction() {
-        action?()
-        delegate?.buttonPressed()
+        alertAction.action?()
+        delegate?.buttonPressed(action: alertAction)
     }
 }

@@ -8,11 +8,21 @@
 
 import UIKit
 
+/// Initialize your action for DDAlert
 public struct DDAlertAction {
+
+    /// Title of DDAlertAction
     public var title: String
+    /// Appearance object to customize DDAlertAction
     public var appearance: DDAlertActionAppearance
+    /// Action to be triggered
     public var action: (() -> Void)?
 
+    /// Initializer
+    /// - Parameters:
+    ///   - title: Title of DDAlertAction
+    ///   - appearance: Appearance object to customize DDAlertAction
+    ///   - action: Action to be triggered
     public init(title: String, appearance: DDAlertActionAppearance = DDAlertActionAppearance(), action: (() -> Void)? = nil) {
         self.title = title
         self.appearance = appearance

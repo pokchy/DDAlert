@@ -27,7 +27,7 @@ internal final class DDAlertView: UIView {
         messageLabel.font = appearance.messageFont
         messageLabel.textColor = appearance.alertTextColor
         actions.forEach { action in
-            let button = DDAlertButton(title: action.title, appearance: action.appearance, action: action.action)
+            let button = DDAlertButton(action: action)
             button.delegate = delegate
             actionsStackView.addArrangedSubview(button)
         }

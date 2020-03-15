@@ -1,5 +1,5 @@
 //
-//  SimpleViewController.swift
+//  ExampleViewController.swift
 //  Example
 //
 //  Created by Thanh Duc Do on 14.03.20.
@@ -9,7 +9,7 @@
 import UIKit
 import DDAlert
 
-class SimpleViewController: UIViewController {
+class ExampleViewController: UIViewController {
 
     @IBAction func showAlert(_ sender: UIButton) {
         let actions = [
@@ -29,9 +29,10 @@ class SimpleViewController: UIViewController {
         appearance.transparentBackgroundColor = .blue
 
         let alert = DDAlert(title: "Insert your title here", message: "Display a message for this alert. Something more", actions: actions, sourceObject: sender, appearance: appearance)
+        alert.delegate = self
         present(alert, animated: true)
     }
-    
+
     @IBAction func showAlertInMiddle(_ sender: Any) {
         let actions = [
             DDAlertAction(title: "Action 1", action: {
@@ -45,6 +46,14 @@ class SimpleViewController: UIViewController {
             })
         ]
         let alert = DDAlert(title: "Insert your title here", message: "Display a message for this alert. Something more", actions: actions)
+        alert.delegate = self
         present(alert, animated: true)
+    }
+}
+
+extension ExampleViewController: DDAlertDelegate {
+
+    func didDismissAlert(fromAction: DDAlertAction?) {
+        print(fromAction?.title)
     }
 }
