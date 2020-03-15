@@ -43,7 +43,6 @@ internal final class DDAlertView: UIView {
         }
         addSubview(contentView)
         contentView.frame = self.bounds
-        contentView.clipsToBounds = true
         contentView.layer.cornerRadius = 8
         contentView.backgroundColor = appearance.alertBackgroundColor
         contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]

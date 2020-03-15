@@ -28,7 +28,7 @@ internal extension UIView {
         let isAroundYAxis = abs(center.x - screenCenterX) < 1
         let isAroundXAxis = abs(center.y - screenCenterY) < 1
 
-        if isAroundYAxis, abs(center.y - screenCenterY) < 1 {
+        if isAroundYAxis, isAroundXAxis {
             return .center
         } else if center.y < screenCenterY, isAroundYAxis {
             return .upperHorizontalAligned

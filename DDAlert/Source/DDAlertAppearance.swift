@@ -12,6 +12,8 @@ public struct DDAlertAppearance {
 
     public var transparentBackgroundColor = UIColor.clear
     public var shadowColor = UIColor.black
+    public var shadowOpacity: Float = 0.3
+    public var shadowRadius: CGFloat = 10
     public var alertBackgroundColor = UIColor.white
     public var alertTextColor = UIColor.black
     public var titleFont = UIFont.boldSystemFont(ofSize: 17)

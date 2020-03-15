@@ -64,6 +64,11 @@ public final class DDAlert: UIViewController {
 
     public override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
+        alertView.layer.shadowPath = UIBezierPath(rect: alertView.bounds).cgPath
+        alertView.layer.shadowColor = appearance.shadowColor.cgColor
+        alertView.layer.shadowOpacity = appearance.shadowOpacity
+        alertView.layer.shadowOffset = .zero
+        alertView.layer.shadowRadius = appearance.shadowRadius
         positionAlertView()
     }
 

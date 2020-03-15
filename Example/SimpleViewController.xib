@@ -19,71 +19,71 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sCS-OJ-Dua">
-                    <rect key="frame" x="348" y="64" width="46" height="30"/>
-                    <state key="normal" title="Button"/>
+                    <rect key="frame" x="361" y="64" width="33" height="30"/>
+                    <state key="normal" title="Alert"/>
                     <connections>
                         <action selector="showAlert:" destination="-1" eventType="touchUpInside" id="6Iy-iR-RcZ"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2bR-cL-ZZH">
-                    <rect key="frame" x="20" y="64" width="46" height="30"/>
-                    <state key="normal" title="Button"/>
+                    <rect key="frame" x="20" y="64" width="33" height="30"/>
+                    <state key="normal" title="Alert"/>
                     <connections>
                         <action selector="showAlert:" destination="-1" eventType="touchUpInside" id="jST-Qi-3WM"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NRT-cK-E1z">
-                    <rect key="frame" x="184" y="433" width="46" height="30"/>
-                    <state key="normal" title="Button"/>
+                    <rect key="frame" x="190.5" y="433" width="33" height="30"/>
+                    <state key="normal" title="Alert"/>
                     <connections>
                         <action selector="showAlert:" destination="-1" eventType="touchUpInside" id="AcT-4x-jyi"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JQI-eX-fhV">
-                    <rect key="frame" x="58" y="433" width="46" height="30"/>
-                    <state key="normal" title="Button"/>
+                    <rect key="frame" x="77.5" y="433" width="33" height="30"/>
+                    <state key="normal" title="Alert"/>
                     <connections>
                         <action selector="showAlert:" destination="-1" eventType="touchUpInside" id="ljT-35-qam"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EVn-Mr-1yR">
-                    <rect key="frame" x="310" y="433" width="46" height="30"/>
-                    <state key="normal" title="Button"/>
+                    <rect key="frame" x="303.5" y="433" width="33" height="30"/>
+                    <state key="normal" title="Alert"/>
                     <connections>
                         <action selector="showAlert:" destination="-1" eventType="touchUpInside" id="Oik-Q8-vP5"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kfE-jo-4qm">
-                    <rect key="frame" x="184" y="253" width="46" height="30"/>
-                    <state key="normal" title="Button"/>
+                    <rect key="frame" x="190.5" y="253" width="33" height="30"/>
+                    <state key="normal" title="Alert"/>
                     <connections>
                         <action selector="showAlert:" destination="-1" eventType="touchUpInside" id="8vp-CO-0ZG"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2MX-zB-wUu">
-                    <rect key="frame" x="184" y="613" width="46" height="30"/>
-                    <state key="normal" title="Button"/>
+                    <rect key="frame" x="190.5" y="613" width="33" height="30"/>
+                    <state key="normal" title="Alert"/>
                     <connections>
                         <action selector="showAlert:" destination="-1" eventType="touchUpInside" id="qKB-4Y-Hi4"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fJY-SZ-nGN">
-                    <rect key="frame" x="20" y="812" width="46" height="30"/>
-                    <state key="normal" title="Button"/>
+                    <rect key="frame" x="20" y="812" width="33" height="30"/>
+                    <state key="normal" title="Alert"/>
                     <connections>
                         <action selector="showAlert:" destination="-1" eventType="touchUpInside" id="COc-Lh-GZ6"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3eT-08-Kbn">
-                    <rect key="frame" x="348" y="812" width="46" height="30"/>
-                    <state key="normal" title="Button"/>
+                    <rect key="frame" x="361" y="812" width="33" height="30"/>
+                    <state key="normal" title="Alert"/>
                     <connections>
                         <action selector="showAlert:" destination="-1" eventType="touchUpInside" id="cRa-iK-nCd"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="voC-dY-FV0">
-                    <rect key="frame" x="348" y="194" width="46" height="30"/>
-                    <state key="normal" title="Button"/>
+                    <rect key="frame" x="309" y="194" width="85" height="30"/>
+                    <state key="normal" title="Default alert"/>
                     <connections>
                         <action selector="showAlertInMiddle:" destination="-1" eventType="touchUpInside" id="7eC-8g-Niz"/>
                     </connections>

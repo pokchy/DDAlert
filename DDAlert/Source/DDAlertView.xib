@@ -16,7 +16,7 @@
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view clipsSubviews="YES" contentMode="scaleToFill" id="Gsk-qm-BJP">
+        <view contentMode="scaleToFill" id="Gsk-qm-BJP">
             <rect key="frame" x="0.0" y="0.0" width="775" height="570"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
