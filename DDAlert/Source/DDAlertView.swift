@@ -26,9 +26,11 @@ internal final class DDAlertView: UIView {
         messageLabel.text = message
         messageLabel.font = appearance.messageFont
         messageLabel.textColor = appearance.alertTextColor
+        actionsStackView.axis = actions.count == 2 ? .horizontal : .vertical
         actions.forEach { action in
             let button = DDAlertButton(action: action)
             button.delegate = delegate
+            button.addConstraint(NSLayoutConstraint(item: button, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 40))
             actionsStackView.addArrangedSubview(button)
         }
     }
