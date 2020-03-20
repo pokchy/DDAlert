@@ -1,15 +1,16 @@
 Pod::Spec.new do |spec|
 
   spec.name         = 'DDAlert'
-  spec.version      = '0.1.0'
+  spec.version      = '0.3.0'
   spec.homepage     = 'https://github.com/pokchy/DDAlert'
-  spec.summary      = 'Testing building a framework.'
+  spec.summary      = 'Customize your alerts and have better user experience by optionally presenting them where user tapped.'
 
   spec.license      = { :type => "MIT", :file => "LICENSE" }
 
   spec.author       = { "Thanh Duc Do" => "29248367+pokchy@users.noreply.github.com" }
 
-  spec.platform     = :ios, '9.0'
+  spec.swift_version = '5.1'
+  spec.ios.deployment_target  = '9.0'
 
   spec.source       = { :git => "https://github.com/pokchy/DDAlert.git", :tag => "#{spec.version}" }
 
