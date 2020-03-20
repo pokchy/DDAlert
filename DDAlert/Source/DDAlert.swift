@@ -92,28 +92,27 @@ public final class DDAlert: UIViewController {
                 alertView.center = view.center
             case .upperHorizontalAligned:
                 alertView.layer.anchorPoint = CGPoint(x: 0.5, y: 0)
-                alertView.layer.position = sourceView.center
+                alertView.frame = CGRect(x: sourceView.center.x - (alertView.frame.width / 2), y: sourceView.center.y, width: alertView.frame.width, height: alertView.frame.height)
             case .upperRight:
                 alertView.layer.anchorPoint = CGPoint(x: 1, y: 0)
-                alertView.layer.position = sourceView.center
+                alertView.frame = CGRect(x: sourceView.center.x - alertView.frame.width, y: sourceView.center.y, width: alertView.frame.width, height: alertView.frame.height)
             case .rightVerticalAligned:
                 alertView.layer.anchorPoint = CGPoint(x: 1, y: 0.5)
-                alertView.layer.position = sourceView.center
+                alertView.frame = CGRect(x: sourceView.center.x - alertView.frame.width, y: sourceView.center.y - (alertView.frame.height / 2), width: alertView.frame.width, height: alertView.frame.height)
             case .lowerRight:
-                alertView.layer.anchorPoint = CGPoint(x: 1, y: 1)
-                alertView.layer.position = sourceView.center
+                alertView.frame = CGRect(x: sourceView.center.x - alertView.frame.width, y: sourceView.center.y - alertView.frame.height, width: alertView.frame.width, height: alertView.frame.height)
             case .lowerHorizontalAligned:
                 alertView.layer.anchorPoint = CGPoint(x: 0.5, y: 1)
-                alertView.layer.position = sourceView.center
+                alertView.frame = CGRect(x: sourceView.center.x - (alertView.frame.width / 2), y: sourceView.center.y - alertView.frame.height, width: alertView.frame.width, height: alertView.frame.height)
             case .lowerLeft:
                 alertView.layer.anchorPoint = CGPoint(x: 0, y: 1)
-                alertView.layer.position = sourceView.center
+                alertView.frame = CGRect(x: sourceView.center.x, y: sourceView.center.y - alertView.frame.height, width: alertView.frame.width, height: alertView.frame.height)
             case .leftVerticalAligned:
                 alertView.layer.anchorPoint = CGPoint(x: 0, y: 0.5)
-                alertView.layer.position = sourceView.center
+                alertView.frame = CGRect(x: sourceView.center.x, y: sourceView.center.y - (alertView.frame.height / 2), width: alertView.frame.width, height: alertView.frame.height)
             case .upperLeft:
                 alertView.layer.anchorPoint = CGPoint(x: 0, y: 0)
-                alertView.layer.position = sourceView.center
+                alertView.frame = CGRect(x: sourceView.center.x, y: sourceView.center.y, width: alertView.frame.width, height: alertView.frame.height)
             }
         } else {
             alertView.center = view.center
