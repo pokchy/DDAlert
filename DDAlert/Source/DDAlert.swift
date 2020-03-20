@@ -79,6 +79,10 @@ public final class DDAlert: UIViewController {
         positionAlertView()
     }
 
+    public func addAction(_ action: DDAlertAction) {
+        actions.append(action)
+    }
+
     @objc internal func dismissAlert() {
         dismiss(animated: true) {
             self.delegate?.didDismissAlert(fromAction: nil)
