@@ -46,6 +46,7 @@ internal final class DDAlertView: UIView {
                 separator.widthAnchor.constraint(equalTo: actionsStackView.widthAnchor).isActive = actionsStackView.axis == .vertical
             }
             let button = DDAlertButton(action: action)
+            button.tag = index
             button.delegate = delegate
             button.heightAnchor.constraint(equalToConstant: 44).isActive = true
             button.widthAnchor.constraint(greaterThanOrEqualToConstant: 120).isActive = true

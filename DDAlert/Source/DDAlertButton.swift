@@ -9,7 +9,7 @@
 import UIKit
 
 internal protocol DDAlertButtonDelegate: AnyObject {
-    func buttonPressed(action: DDAlertAction)
+    func buttonPressed(index: Int)
 }
 
 internal final class DDAlertButton: UIButton {
@@ -34,6 +34,6 @@ internal final class DDAlertButton: UIButton {
 
     @objc internal func triggerAction() {
         alertAction.action?()
-        delegate?.buttonPressed(action: alertAction)
+        delegate?.buttonPressed(index: tag)
     }
 }

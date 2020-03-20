@@ -10,8 +10,8 @@ import UIKit
 
 public protocol DDAlertDelegate: AnyObject {
     /// Delegate function is triggered when alert was dismissed
-    /// - Parameter fromAction: Action object when DDAlert was dismissed by pressing an action. Otherwise nil.
-    func didDismissAlert(fromAction: DDAlertAction?)
+    /// - Parameter fromIndex: Index of action when DDAlert was dismissed by pressing an action. Otherwise nil.
+    func didDismissAlert(fromIndex: Int?)
 }
 
 /// Customizable alert
@@ -87,7 +87,7 @@ public final class DDAlert: UIViewController {
 
     @objc internal func dismissAlert() {
         dismiss(animated: true) {
-            self.delegate?.didDismissAlert(fromAction: nil)
+            self.delegate?.didDismissAlert(fromIndex: nil)
         }
     }
 
@@ -137,9 +137,9 @@ extension DDAlert: UIGestureRecognizerDelegate {
 }
 
 extension DDAlert: DDAlertButtonDelegate {
-    func buttonPressed(action: DDAlertAction) {
+    func buttonPressed(index: Int) {
         dismiss(animated: true) {
-            self.delegate?.didDismissAlert(fromAction: action)
+            self.delegate?.didDismissAlert(fromIndex: index)
         }
     }
 }
