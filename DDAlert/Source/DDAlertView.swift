@@ -27,10 +27,26 @@ internal final class DDAlertView: UIView {
         messageLabel.font = appearance.messageFont
         messageLabel.textColor = appearance.alertTextColor
         actionsStackView.axis = actions.count == 2 ? .horizontal : .vertical
+        let removedSubviews = actionsStackView.arrangedSubviews.reduce([]) { (allSubviews, subview) -> [UIView] in
+            actionsStackView.removeArrangedSubview(subview)
+            return allSubviews + [subview]
+        }
+        NSLayoutConstraint.deactivate(removedSubviews.flatMap { $0.constraints })
+        removedSubviews.forEach { $0.removeFromSuperview() }
         actions.forEach { action in
+            if actionsStackView.arrangedSubviews.count > 0 {
+                let separator = UIView()
+                separator.widthAnchor.constraint(equalToConstant: 1).isActive = actionsStackView.axis == .horizontal
+                separator.heightAnchor.constraint(equalToConstant: 1).isActive = actionsStackView.axis == .vertical
+                separator.backgroundColor = UIColor(red: 200/255, green: 200/255, blue: 200/255, alpha: 0.8)
+                actionsStackView.addArrangedSubview(separator)
+                separator.heightAnchor.constraint(equalTo: actionsStackView.heightAnchor).isActive = actionsStackView.axis == .horizontal
+                separator.widthAnchor.constraint(equalTo: actionsStackView.widthAnchor).isActive = actionsStackView.axis == .vertical
+            }
             let button = DDAlertButton(action: action)
             button.delegate = delegate
-            button.addConstraint(NSLayoutConstraint(item: button, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 40))
+            button.heightAnchor.constraint(equalToConstant: 44).isActive = true
+            button.widthAnchor.constraint(greaterThanOrEqualToConstant: 120).isActive = true
             actionsStackView.addArrangedSubview(button)
         }
     }
