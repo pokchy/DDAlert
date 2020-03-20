@@ -12,6 +12,7 @@
             <connections>
                 <outlet property="actionsStackView" destination="QRW-dy-ijB" id="LGa-WQ-XpS"/>
                 <outlet property="messageLabel" destination="Mcm-nK-jrM" id="j6X-Jg-MbR"/>
+                <outlet property="separatorView" destination="ncR-RM-ojl" id="jOp-wr-UeD"/>
                 <outlet property="titleLabel" destination="zag-lw-31w" id="p82-b1-CnW"/>
             </connections>
         </placeholder>

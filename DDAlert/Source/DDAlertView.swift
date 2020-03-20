@@ -13,6 +13,7 @@ internal final class DDAlertView: UIView {
     @IBOutlet internal weak var titleLabel: UILabel!
     @IBOutlet internal weak var messageLabel: UILabel!
     @IBOutlet internal weak var actionsStackView: UIStackView!
+    @IBOutlet private weak var separatorView: UIView!
 
     private var appearance: DDAlertAppearance
 
@@ -26,6 +27,7 @@ internal final class DDAlertView: UIView {
         messageLabel.text = message
         messageLabel.font = appearance.messageFont
         messageLabel.textColor = appearance.alertTextColor
+        separatorView.backgroundColor = appearance.separatorColor
         actionsStackView.axis = actions.count == 2 ? .horizontal : .vertical
         let removedSubviews = actionsStackView.arrangedSubviews.reduce([]) { (allSubviews, subview) -> [UIView] in
             actionsStackView.removeArrangedSubview(subview)
@@ -33,12 +35,12 @@ internal final class DDAlertView: UIView {
         }
         NSLayoutConstraint.deactivate(removedSubviews.flatMap { $0.constraints })
         removedSubviews.forEach { $0.removeFromSuperview() }
-        actions.forEach { action in
+        actions.enumerated().forEach { index, action in
             if actionsStackView.arrangedSubviews.count > 0 {
                 let separator = UIView()
                 separator.widthAnchor.constraint(equalToConstant: 1).isActive = actionsStackView.axis == .horizontal
                 separator.heightAnchor.constraint(equalToConstant: 1).isActive = actionsStackView.axis == .vertical
-                separator.backgroundColor = UIColor(red: 200/255, green: 200/255, blue: 200/255, alpha: 0.8)
+                separator.backgroundColor = appearance.separatorColor
                 actionsStackView.addArrangedSubview(separator)
                 separator.heightAnchor.constraint(equalTo: actionsStackView.heightAnchor).isActive = actionsStackView.axis == .horizontal
                 separator.widthAnchor.constraint(equalTo: actionsStackView.widthAnchor).isActive = actionsStackView.axis == .vertical

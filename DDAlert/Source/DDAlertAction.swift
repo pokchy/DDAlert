@@ -11,12 +11,11 @@ import UIKit
 /// Initialize your action for DDAlert
 public struct DDAlertAction {
 
-    /// Title of DDAlertAction
-    public var title: String
+    internal var title: String
+    internal var action: (() -> Void)?
+
     /// Appearance object to customize DDAlertAction
     public var appearance: DDAlertActionAppearance
-    /// Action to be triggered
-    public var action: (() -> Void)?
 
     /// Initializer
     /// - Parameters:

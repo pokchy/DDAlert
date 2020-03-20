@@ -27,6 +27,8 @@ public struct DDAlertAppearance {
     public var titleFont = UIFont.boldSystemFont(ofSize: 17)
     /// Message font in DDAlert. Default is system font with size 17
     public var messageFont = UIFont.systemFont(ofSize: 17)
+    /// Color of the separator
+    public var separatorColor = UIColor(red: 200/255, green: 200/255, blue: 200/255, alpha: 0.8)
 
     public init() { }
 }

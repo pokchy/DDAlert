@@ -17,8 +17,6 @@ public protocol DDAlertDelegate: AnyObject {
 /// Customizable alert
 public final class DDAlert: UIViewController {
 
-    private weak var sourceObject: AnyObject?
-    private var appearance: DDAlertAppearance
     private var alertTitle: String?
     private var alertMessage: String?
     private var actions: [DDAlertAction]
@@ -36,6 +34,10 @@ public final class DDAlert: UIViewController {
         return alertView
     }()
 
+    /// Alert will try to position itsself relatively to this object
+    public weak var sourceObject: AnyObject?
+    /// Cusomize the alert
+    public var appearance: DDAlertAppearance
     public weak var delegate: DDAlertDelegate?
 
     /// DDAlert initializer
