@@ -32,7 +32,7 @@ internal final class DDAlertButton: UIButton {
         fatalError("init(coder:) has not been implemented")
     }
 
-    @objc private func triggerAction() {
+    @objc internal func triggerAction() {
         alertAction.action?()
         delegate?.buttonPressed(action: alertAction)
     }

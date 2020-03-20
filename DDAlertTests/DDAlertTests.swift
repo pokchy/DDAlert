@@ -50,7 +50,17 @@ class DDAlertTests: XCTestCase {
     }
 
     func testAlertWithAction() {
-        let alert = DDAlert(actions: [DDAlertAction(title: "Test")])
-        XCTAssertEqual((alert.alertView.actionsStackView.arrangedSubviews.first as? UIButton)?.titleLabel?.text, "Test", "Action label text should be 'Test'")
+        var testString = ""
+        let action = DDAlertAction(title: "Test") {
+            testString = "Action triggered"
+        }
+        let alert = DDAlert(actions: [action])
+        guard let actionButton = alert.alertView.actionsStackView.arrangedSubviews.first as? DDAlertButton else {
+            XCTFail("There is no action added to alert")
+            return
+        }
+        XCTAssertEqual(actionButton.titleLabel?.text, "Test", "Action label text should be 'Test'")
+        actionButton.triggerAction()
+        XCTAssertEqual(testString, "Action triggered", "Result of triggered action is unexpected")
     }
 }
