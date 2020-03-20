@@ -106,6 +106,7 @@ public final class DDAlert: UIViewController {
                 alertView.layer.anchorPoint = CGPoint(x: 1, y: 0.5)
                 alertView.frame = CGRect(x: sourceView.center.x - alertView.frame.width, y: sourceView.center.y - (alertView.frame.height / 2), width: alertView.frame.width, height: alertView.frame.height)
             case .lowerRight:
+                alertView.layer.anchorPoint = CGPoint(x: 1, y: 1)
                 alertView.frame = CGRect(x: sourceView.center.x - alertView.frame.width, y: sourceView.center.y - alertView.frame.height, width: alertView.frame.width, height: alertView.frame.height)
             case .lowerHorizontalAligned:
                 alertView.layer.anchorPoint = CGPoint(x: 0.5, y: 1)
