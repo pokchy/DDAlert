@@ -29,7 +29,7 @@ public final class DDAlert: UIViewController {
     }
 
     internal lazy var alertView: DDAlertView = {
-        let alertView = DDAlertView(title: alertTitle, message: alertMessage, actions: actions, appearance: appearance, delegate: self)
+        let alertView = DDAlertView(title: alertTitle, message: alertMessage, textFields: textFields, actions: actions, appearance: appearance, delegate: self)
         alertView.translatesAutoresizingMaskIntoConstraints = false
         return alertView
     }()
@@ -38,6 +38,8 @@ public final class DDAlert: UIViewController {
     public weak var sourceObject: AnyObject?
     /// Cusomize the alert
     public var appearance: DDAlertAppearance
+    /// UITextFields
+    public private(set) var textFields = [UITextField]()
     public weak var delegate: DDAlertDelegate?
 
     /// DDAlert initializer
@@ -47,7 +49,7 @@ public final class DDAlert: UIViewController {
     ///   - actions: Array of DDAlertAction to trigger actions
     ///   - sourceObject: Object to determine location of DDAlert. Default is nil
     ///   - appearance: Appearance to customize DDAlert
-    public init(title: String? = nil, message: String? = nil, actions: [DDAlertAction], sourceObject: AnyObject? = nil, appearance: DDAlertAppearance = DDAlertAppearance()) {
+    public init(title: String? = nil, message: String? = nil, actions: [DDAlertAction] = [], sourceObject: AnyObject? = nil, appearance: DDAlertAppearance = DDAlertAppearance()) {
         self.sourceObject = sourceObject
         self.appearance = appearance
         self.alertTitle = title
@@ -69,6 +71,7 @@ public final class DDAlert: UIViewController {
         tapRecognizer.delegate = self
         view.addGestureRecognizer(tapRecognizer)
         view.addSubview(alertView)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
     }
 
     public override func viewDidLayoutSubviews() {
@@ -81,14 +84,44 @@ public final class DDAlert: UIViewController {
         positionAlertView()
     }
 
+    public override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if let firstTextField = textFields.first {
+            firstTextField.becomeFirstResponder()
+        }
+    }
+
+    /// Add an action to the alert
+    /// - Parameter action: Action to be added
     public func addAction(_ action: DDAlertAction) {
         actions.append(action)
+    }
+
+    /// Add a UITextField to the alert
+    /// - Parameter configuration: Configuration handler to customize the UITextField
+    public func addTextField(configuration: (_ textField: UITextField) -> Void) {
+        let textField = UITextField()
+        textField.borderStyle = .roundedRect
+        configuration(textField)
+        textFields.append(textField)
     }
 
     @objc internal func dismissAlert() {
         dismiss(animated: true) {
             self.delegate?.didDismissAlert(fromIndex: nil)
         }
+    }
+
+    @objc private func keyboardWillShow(notification: Notification) {
+        guard
+            let duration = (notification.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as AnyObject).doubleValue,
+            let endKeyboardHeight = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue.height else {
+                return
+        }
+        NotificationCenter.default.removeObserver(self)
+        UIView.animate(withDuration: duration, animations: {
+            self.alertView.frame = CGRect(x: self.view.center.x - (self.alertView.frame.width / 2), y: UIScreen.main.bounds.height - (self.alertView.frame.height + endKeyboardHeight + 20), width: self.alertView.frame.width, height: self.alertView.frame.height)
+        })
     }
 
     private func positionAlertView() {
