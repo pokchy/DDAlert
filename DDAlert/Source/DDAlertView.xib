@@ -11,15 +11,15 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DDAlertView" customModule="DDAlert" customModuleProvider="target">
             <connections>
                 <outlet property="actionsStackView" destination="QRW-dy-ijB" id="LGa-WQ-XpS"/>
+                <outlet property="customViewsStackView" destination="J1K-gI-l10" id="rla-qX-blA"/>
                 <outlet property="messageLabel" destination="Mcm-nK-jrM" id="j6X-Jg-MbR"/>
                 <outlet property="separatorView" destination="ncR-RM-ojl" id="jOp-wr-UeD"/>
-                <outlet property="textFieldsStackView" destination="J1K-gI-l10" id="rla-qX-blA"/>
                 <outlet property="titleLabel" destination="zag-lw-31w" id="p82-b1-CnW"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="Gsk-qm-BJP">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="342"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="400"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1wd-AF-b2g">
@@ -52,55 +52,60 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ncR-RM-ojl">
-                    <rect key="frame" x="0.0" y="281" width="320" height="1"/>
+                    <rect key="frame" x="0.0" y="339" width="320" height="1"/>
                     <color key="backgroundColor" red="0.78431372549019607" green="0.78431372549019607" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="1" id="euZ-wF-Fc4"/>
                     </constraints>
                 </view>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="QRW-dy-ijB">
-                    <rect key="frame" x="10" y="282" width="300" height="60"/>
+                    <rect key="frame" x="0.0" y="340" width="320" height="60"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ivL-ye-4kC">
-                            <rect key="frame" x="0.0" y="0.0" width="300" height="30"/>
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="30"/>
                             <state key="normal" title="Button"/>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JXp-I7-WYa">
-                            <rect key="frame" x="0.0" y="30" width="300" height="30"/>
+                            <rect key="frame" x="0.0" y="30" width="320" height="30"/>
                             <state key="normal" title="Button"/>
                         </button>
                     </subviews>
                     <constraints>
                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="1ii-Yi-K3Z"/>
-                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="300" id="MDV-XV-FwZ"/>
+                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="320" id="MDV-XV-FwZ"/>
                     </constraints>
                 </stackView>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="J1K-gI-l10">
-                    <rect key="frame" x="20" y="133" width="280" height="128"/>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="J1K-gI-l10">
+                    <rect key="frame" x="0.0" y="133" width="320" height="186"/>
+                    <constraints>
+                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="320" id="ECI-kA-9Fb"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="gYk-1U-HjW"/>
+                    </constraints>
                 </stackView>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
                 <constraint firstItem="QRW-dy-ijB" firstAttribute="leading" secondItem="p3W-XW-NFA" secondAttribute="leading" priority="999" id="1J3-iy-j7j"/>
-                <constraint firstItem="1wd-AF-b2g" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="p3W-XW-NFA" secondAttribute="leading" constant="20" id="2fr-Ub-V04"/>
+                <constraint firstItem="1wd-AF-b2g" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="p3W-XW-NFA" secondAttribute="leading" constant="10" id="2fr-Ub-V04"/>
                 <constraint firstItem="p3W-XW-NFA" firstAttribute="bottom" secondItem="QRW-dy-ijB" secondAttribute="bottom" id="Eds-pk-ySc"/>
                 <constraint firstItem="ncR-RM-ojl" firstAttribute="top" secondItem="J1K-gI-l10" secondAttribute="bottom" constant="20" id="Eop-Nc-ccM"/>
                 <constraint firstItem="ncR-RM-ojl" firstAttribute="top" relation="greaterThanOrEqual" secondItem="1wd-AF-b2g" secondAttribute="bottom" constant="20" id="IKH-Go-9IB"/>
-                <constraint firstItem="p3W-XW-NFA" firstAttribute="trailing" secondItem="J1K-gI-l10" secondAttribute="trailing" constant="20" id="NJ6-dc-iZi"/>
+                <constraint firstItem="p3W-XW-NFA" firstAttribute="trailing" secondItem="J1K-gI-l10" secondAttribute="trailing" priority="999" id="NJ6-dc-iZi"/>
                 <constraint firstItem="QRW-dy-ijB" firstAttribute="centerX" secondItem="Gsk-qm-BJP" secondAttribute="centerX" id="Po6-dF-hsh"/>
+                <constraint firstItem="J1K-gI-l10" firstAttribute="centerX" secondItem="Gsk-qm-BJP" secondAttribute="centerX" id="T7e-cz-FPS"/>
                 <constraint firstItem="1wd-AF-b2g" firstAttribute="top" secondItem="p3W-XW-NFA" secondAttribute="top" constant="20" id="Wx3-mF-BFM"/>
                 <constraint firstAttribute="trailing" secondItem="ncR-RM-ojl" secondAttribute="trailing" id="c8M-9a-1KJ"/>
-                <constraint firstItem="p3W-XW-NFA" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="1wd-AF-b2g" secondAttribute="trailing" constant="20" id="f8V-g2-mND"/>
+                <constraint firstItem="p3W-XW-NFA" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="1wd-AF-b2g" secondAttribute="trailing" constant="10" id="f8V-g2-mND"/>
                 <constraint firstItem="ncR-RM-ojl" firstAttribute="leading" secondItem="Gsk-qm-BJP" secondAttribute="leading" id="gO5-px-5TZ"/>
                 <constraint firstItem="1wd-AF-b2g" firstAttribute="centerX" secondItem="Gsk-qm-BJP" secondAttribute="centerX" id="j9p-BT-YrU"/>
                 <constraint firstItem="J1K-gI-l10" firstAttribute="top" secondItem="1wd-AF-b2g" secondAttribute="bottom" constant="20" id="lSR-yr-OYC"/>
                 <constraint firstItem="QRW-dy-ijB" firstAttribute="top" secondItem="ncR-RM-ojl" secondAttribute="bottom" id="nvH-6c-1cL"/>
                 <constraint firstItem="p3W-XW-NFA" firstAttribute="trailing" secondItem="QRW-dy-ijB" secondAttribute="trailing" priority="999" id="sgS-pg-9pZ"/>
-                <constraint firstItem="J1K-gI-l10" firstAttribute="leading" secondItem="p3W-XW-NFA" secondAttribute="leading" constant="20" id="zVf-ef-OuI"/>
+                <constraint firstItem="J1K-gI-l10" firstAttribute="leading" secondItem="p3W-XW-NFA" secondAttribute="leading" priority="999" id="zVf-ef-OuI"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="p3W-XW-NFA"/>
-            <point key="canvasLocation" x="-188.40579710144928" y="-135.9375"/>
+            <point key="canvasLocation" x="32.608695652173914" y="-112.83482142857142"/>
         </view>
     </objects>
 </document>

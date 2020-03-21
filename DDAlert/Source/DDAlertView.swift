@@ -12,13 +12,13 @@ internal final class DDAlertView: UIView {
 
     @IBOutlet internal weak var titleLabel: UILabel!
     @IBOutlet internal weak var messageLabel: UILabel!
-    @IBOutlet internal weak var textFieldsStackView: UIStackView!
+    @IBOutlet internal weak var customViewsStackView: UIStackView!
     @IBOutlet internal weak var actionsStackView: UIStackView!
     @IBOutlet private weak var separatorView: UIView!
 
     private var appearance: DDAlertAppearance
 
-    internal init(title: String?, message: String?, textFields: [UITextField], actions: [DDAlertAction], appearance: DDAlertAppearance, delegate: DDAlertButtonDelegate?) {
+    internal init(title: String?, message: String?, customViews: [UIView], actions: [DDAlertAction], appearance: DDAlertAppearance, delegate: DDAlertButtonDelegate?) {
         self.appearance = appearance
         super.init(frame: .zero)
         loadView()
@@ -34,9 +34,8 @@ internal final class DDAlertView: UIView {
             actionsStackView.removeArrangedSubview(subview)
             return allSubviews + [subview]
         }
-        textFields.forEach { textField in
-            textField.heightAnchor.constraint(equalToConstant: 40).isActive = true
-            textFieldsStackView.addArrangedSubview(textField)
+        customViews.forEach { textField in
+            customViewsStackView.addArrangedSubview(textField)
         }
         NSLayoutConstraint.deactivate(removedSubviews.flatMap { $0.constraints })
         removedSubviews.forEach { $0.removeFromSuperview() }
