@@ -55,7 +55,7 @@ public final class DDAlert: UIViewController {
         self.alertTitle = title
         self.alertMessage = message
         self.actions = actions
-        super.init(nibName: String(describing: DDAlert.self), bundle: Bundle(for: DDAlert.self))
+        super.init(nibName: nil, bundle: nil)
         modalPresentationStyle = .overCurrentContext
         transitioningDelegate = self
     }

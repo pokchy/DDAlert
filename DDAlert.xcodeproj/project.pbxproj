@@ -14,7 +14,6 @@
 		012ABDBC241D022E00EBEC9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 012ABDBB241D022E00EBEC9B /* Assets.xcassets */; };
 		012ABDBF241D022E00EBEC9B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 012ABDBD241D022E00EBEC9B /* LaunchScreen.storyboard */; };
 		012ABDC8241D045500EBEC9B /* DDAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012ABDC6241D045500EBEC9B /* DDAlert.swift */; };
-		012ABDC9241D045500EBEC9B /* DDAlert.xib in Resources */ = {isa = PBXBuildFile; fileRef = 012ABDC7241D045500EBEC9B /* DDAlert.xib */; };
 		01B1625C241E390100D521BD /* DDAlertAnimatedTransitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B1625B241E390100D521BD /* DDAlertAnimatedTransitioning.swift */; };
 		01B1625E241E4C9000D521BD /* UIView+Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B1625D241E4C9000D521BD /* UIView+Position.swift */; };
 		01B16260241E536C00D521BD /* ExampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01B1625F241E536C00D521BD /* ExampleViewController.xib */; };
@@ -51,7 +50,6 @@
 		012ABDBE241D022E00EBEC9B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		012ABDC0241D022E00EBEC9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		012ABDC6241D045500EBEC9B /* DDAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDAlert.swift; sourceTree = "<group>"; };
-		012ABDC7241D045500EBEC9B /* DDAlert.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DDAlert.xib; sourceTree = "<group>"; };
 		01B1625B241E390100D521BD /* DDAlertAnimatedTransitioning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDAlertAnimatedTransitioning.swift; sourceTree = "<group>"; };
 		01B1625D241E4C9000D521BD /* UIView+Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Position.swift"; sourceTree = "<group>"; };
 		01B1625F241E536C00D521BD /* ExampleViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExampleViewController.xib; sourceTree = "<group>"; };
@@ -156,7 +154,6 @@
 			isa = PBXGroup;
 			children = (
 				012ABDC6241D045500EBEC9B /* DDAlert.swift */,
-				012ABDC7241D045500EBEC9B /* DDAlert.xib */,
 				01D9BFB2241D10E60034E534 /* DDAlertView.swift */,
 				01D9BFB8241D30F40034E534 /* DDAlertView.xib */,
 				01D9BFB6241D1B100034E534 /* DDAlertAppearance.swift */,
@@ -283,7 +280,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				012ABDC9241D045500EBEC9B /* DDAlert.xib in Resources */,
 				01D9BFB9241D30F40034E534 /* DDAlertView.xib in Resources */,
 				01D9BFB1241D0FD50034E534 /* DDAlert.podspec in Resources */,
 			);
